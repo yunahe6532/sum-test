@@ -1,13 +1,13 @@
 #Makefile
-all : sum-test
+all: sum-test
 
-sum-tset : sum.o main.o
+sum-tset: sum.o main.o
 	g++ -o sum-test sum.o main.o
 
 main.o: sum.h main.cpp
 
-sum.o sum.h sum.cpp
+sum.o: sum.h sum.cpp
 
-clean
+clean:
 	rm -f sum-test
 	rm -f *.o
